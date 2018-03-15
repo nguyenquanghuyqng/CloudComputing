@@ -10,4 +10,5 @@ public class NewsController {
 	public String Home() {
 		return "Hello Huy";
 	}
+	
 }
