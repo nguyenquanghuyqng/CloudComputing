@@ -10,5 +10,4 @@ public class HomeAdmin {
 	public String Home() {
 		return "HomeAdmin";
 	}
-	
 }

@@ -52,8 +52,6 @@
 
 	<div id="navbar"
 		class="img-responsive navbar navbar-default ace-save-state">
-		<img class="img-responsive"
-			src="Style/HomeAdmin/images/background1.png" alt="FPT Software" />
 		<div class="navbar-container ace-save-state" id="navbar-container">
 			<button type="button" class="navbar-toggle menu-toggler pull-left"
 				id="menu-toggler" data-target="#sidebar">
@@ -120,38 +118,14 @@
 				</a></li>
 
 				<!-- fa-desktop: là sử dụng font-awesome để lấy các icon -->
-				<li><a href="skill"> <i class="menu-icon fa fa-file-text"></i>
-						<span class="menu-text">Manage Skill </span>
+				<li><a href="manage-news"> <i class="menu-icon fa fa-file-text"></i>
+						<span class="menu-text">Manage News </span>
 				</a></li>
-				<li><a href="position"> <i
-						class="menu-icon fa fa-line-chart"></i> <span class="menu-text">Manage
-							Position </span>
+				<li><a href="manage-users"> <i
+						class="menu-icon fa fa-users"></i> <span class="menu-text">Manage
+							Users </span>
 				</a></li>
-				<li><a href="interviewer"> <i class="menu-icon fa fa-users"></i>
-						<span class="menu-text">Manage Interviewer</span>
-				</a></li>
-				<li><a href="candidate"> <i class="menu-icon fa fa-user"></i>
-						<span class="menu-text">Manage Candidate</span>
-				</a></li>
-				<li><a href="question"> <i
-						class="menu-icon fa fa-folder-open-o"></i> <span class="menu-text">Manage
-							Question</span>
-				</a></li>
-				<li><a href="InterviewResult"> <i
-						class="menu-icon fa fa-pencil-square-o"></i> <span
-						class="menu-text">Manage Result</span>
-				</a></li>
-				<li><a href="InterviewSchedule"> <i
-						class="menu-icon fa fa-calendar"></i> <span class="menu-text">Manage
-							Schedule</span>
-				</a></li>
-				<li><a href="interview_process"> <i
-						class="menu-icon fa fa-hourglass-start"></i> <span
-						class="menu-text">Manage Process</span>
-				</a></li>
-				<li><a href="user"> <i class="menu-icon fa fa-github-alt"></i>
-						<span class="menu-text">Manage Users</span>
-				</a></li>
+			
 			</ul>
 			<!-- /.nav-list -->
 
