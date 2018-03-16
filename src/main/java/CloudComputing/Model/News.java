@@ -19,6 +19,8 @@ public class News {
 	private String image;
 	private String link;
 	private int contenttypeid;
+	
+	public News() {}
 
 	public News(int id, String headding, String content, Date date, String image, String link, int contenttypeid) {
 		super();

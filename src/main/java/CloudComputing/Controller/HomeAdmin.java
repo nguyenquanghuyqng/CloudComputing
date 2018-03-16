@@ -17,7 +17,7 @@ public class HomeAdmin {
 
 	@GetMapping("/manage-news")
 	public String ManageNews(HttpServletRequest request) {
-		request.setAttribute("news", newService.findAllNews());
+		request.setAttribute("newss", newService.findAllNews());
 		request.setAttribute("announcement", "Show data successfull");
 		request.setAttribute("mode", "LIST");
 		return PATH;

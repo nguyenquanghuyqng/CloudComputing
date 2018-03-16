@@ -144,7 +144,7 @@
 		<!--BODY -->
 	<c:choose>
 
-		<c:when test="${mode == 'Huy'}">
+		<c:when test="${mode == 'LIST'}">
 			<div class="main-content">
 
 				<div class="main-content-inner">
@@ -193,15 +193,15 @@
 										</tr>
 									</thead>
 									<tbody id="myTable">
-										<c:forEach var="candidate" items="${news}">
+										<c:forEach var="news" items="${newss}">
 											<tr>
-												<td>${news.id}</td>
 												<td>${news.headding}</td>
+												<td>${news.id}</td>
 												<td>${news.content}</td>
 												<td>${news.date}</td>
 												<td>${news.image}</td>
 												<td>${news.link}</td>
-												<td>${news.contentypeid}</td>
+												<td></td>
 												<td><select style="width: 80px !important; height: 26px !important;"
 													onchange="myFunction(this.value, ${news.id})">
 														<option value="0">Option</option>
