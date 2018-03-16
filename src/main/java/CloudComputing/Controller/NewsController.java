@@ -1,14 +1,14 @@
 package CloudComputing.Controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class NewsController {
 	
-	@GetMapping("/hello")
+	@GetMapping("/homeadmin")
 	public String Home() {
-		return "Hello Huy";
+		return "HomeAdmin";
 	}
 	
 }
