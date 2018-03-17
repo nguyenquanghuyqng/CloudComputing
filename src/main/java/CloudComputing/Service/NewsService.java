@@ -17,6 +17,7 @@ public class NewsService {
 	private final NewsRespository newsRespository;
 
 	public NewsService(NewsRespository newsRespository) {
+		super();
 		this.newsRespository = newsRespository;
 	}
 

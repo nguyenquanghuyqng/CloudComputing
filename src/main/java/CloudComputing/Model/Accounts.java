@@ -9,18 +9,19 @@ import javax.persistence.Id;
 public class Accounts {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int userid;
 	private String username;
 	private String password;
-	private String role;
 
-	public Accounts(int userid, String username, String password, String role) {
+	public Accounts() {
+	}
+
+	public Accounts(int userid, String username, String password) {
 		super();
 		this.userid = userid;
 		this.username = username;
 		this.password = password;
-		this.role = role;
 	}
 
 	public int getUserid() {
@@ -45,14 +46,6 @@ public class Accounts {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
 	}
 
 }

@@ -11,18 +11,18 @@ import javax.persistence.Id;
 public class News {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String headding;
 	private String content;
 	private Date date;
 	private String image;
 	private String link;
-	private int contenttypeid;
-	
-	public News() {}
 
-	public News(int id, String headding, String content, Date date, String image, String link, int contenttypeid) {
+	public News() {
+	}
+
+	public News(int id, String headding, String content, Date date, String image, String link) {
 		super();
 		this.id = id;
 		this.headding = headding;
@@ -30,7 +30,6 @@ public class News {
 		this.date = date;
 		this.image = image;
 		this.link = link;
-		this.contenttypeid = contenttypeid;
 	}
 
 	public int getId() {
@@ -79,14 +78,6 @@ public class News {
 
 	public void setLink(String link) {
 		this.link = link;
-	}
-
-	public int getContenttypeid() {
-		return contenttypeid;
-	}
-
-	public void setContenttypeid(int contenttypeid) {
-		this.contenttypeid = contenttypeid;
 	}
 
 }

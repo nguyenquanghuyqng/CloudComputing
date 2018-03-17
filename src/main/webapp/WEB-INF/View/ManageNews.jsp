@@ -165,13 +165,7 @@
 						<div class="col-sm-5 col-xs-5">
 							<h2>NEWS</h2>
 						</div>
-						<div class="col-sm-5 col-xs-5">
-							<a href="new-candidate"><button
-									style="border: 0 !important; margin-top: 12px;"
-									class="addcandidate btn btn-primary btn pull-right">
-									<span class="fa fa-plus-circle"> </span> Add News
-								</button></a>
-						</div>
+
 						<div class="col-sm-1 col-xs-1"></div>
 
 						<div class="col-sm-12 col-xs-12">
@@ -188,24 +182,22 @@
 											<th class="text-center">&emsp;&emsp;DATE</th>
 											<th class="text-center">&emsp;&emsp;IMAGE</th>
 											<th class="text-center">&emsp;&emsp;LINK</th>
-											<th class="text-center">&emsp;&emsp;CONTENTYPEID</th>
 											<th class="text-center" style="width: 200px">Action</th>
 										</tr>
 									</thead>
 									<tbody id="myTable">
 										<c:forEach var="news" items="${newss}">
 											<tr>
-												<td>${news.headding}</td>
 												<td>${news.id}</td>
+												<td>${news.headding}</td>
 												<td>${news.content}</td>
 												<td>${news.date}</td>
 												<td>${news.image}</td>
 												<td>${news.link}</td>
-												<td></td>
 												<td><select style="width: 80px !important; height: 26px !important;"
 													onchange="myFunction(this.value, ${news.id})">
 														<option value="0">Option</option>
-													 	<option value="1">Details</option>
+													 	<option value="1">Add</option>
 													  	<option value="2">Edit</option>
 														<option id="delete" value="3">Delete</option>
 												</select></td>
@@ -232,7 +224,7 @@
 									                                text : "Delete",
 									                                click : function() {
 									                                	$(this).dialog("close");
-									                                	window.location.assign('delete-candidate?id=' + id)
+									                                	window.location.assign('delete-news?id=' + id)
 									                                }
 									                        },
 									                        {
@@ -243,10 +235,10 @@
 									                        }]
 									        });
 									} else if (val == 2) {
-										window.location.assign('update-candidate?id=' + id)
+										window.location.assign('edit-news?id=' + id)
 									}
 									else if (val == 1) {
-										window.location.assign('detail-candidate?id=' + id)
+										window.location.assign('add-news?id=' + id)
 									}
 								}
 							</script>
@@ -256,6 +248,152 @@
 				</div>
 			</div>
 		</c:when>
+		
+		
+		<c:when test="${mode == 'NEW'}">
+			<div class="main-content">
+
+				<div class="main-content-inner">
+					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li><i class="ace-icon fa fa-home home-icon"></i> <a
+								href="home">Home</a></li>
+
+							<li><a href="candidate">Manage NEWS</a></li>
+						</ul>
+					</div>
+				</div>
+			<br> <br>
+				<div class="page-content">
+					<div class="page-header text-center">
+						<b><h1>MANAGE NEWS</h1></b>
+					</div>
+					<div class="col-sm-6 col-xs-6">
+						<h2>
+							<c:out value="${mode}"></c:out>
+							NEWS
+						</h2>
+					</div>
+					<div class="col-sm-5 col-xs-5"></div>
+					<div class="col-sm-1 col-xs-1"></div>
+
+					<br> <br> <br> <br> <br>
+					<div class="col-sm-12 col-xs-12">
+						<form action="save-candidate" method="POST" style="align-items: center;">
+							<p><strong>News Information</strong></p>
+							<div class="form-group col-sm-12 col-xs-12">
+									<input type="hidden" name="id" value="0" />
+							</div>	
+							<div class="form-group col-sm-6">
+								<span>Headding:</span><span style="color: red;">(*)</span>  
+								<input style="width: 230px!important;" class="form-control" type="text" name="headding" 
+									id ="headding" required>
+							</div>
+							<div class="form-group col-sm-6">
+								<span>Content:</span> 
+								<input style="width: 230px!important;" type="text" class="form-control"  name="content"  value="999999999"
+									id="content">								
+							</div>
+							<div class="form-group col-sm-6">
+								<span>Email:</span><span style="color: red;">(*)</span> 
+								<input style="width: 230px!important;" type="email" class="form-control" name="email" 
+									id ="email" required>
+							</div>
+							<div class="form-group col-sm-6">
+								<span>Birth of day:</span><span style="color: red;">(*)</span><br>  
+								<input style="width: 230px!important;" type="date" name="birth"
+									id="birthday" required>
+							</div>
+	
+							<div class="form-group col-sm-6">
+								<span>Phone:</span><span style="color: red;">(*)</span>  
+								<input style="width: 230px!important;" type="number" class="form-control" name="phone" 
+									id="phone" required>
+							</div>
+							<div class="form-group col-sm-6">
+								<span>Address:</span> 
+								<input style="width: 230px!important;" type="text" class="form-control" name="address" 
+									id="address">								
+							</div>
+							<div class="form-group col-sm-12"> 
+								<input style="width: 230px!important;" type="hidden" class="form-control" name="coincidence" id="address">								
+							</div>						
+							<p><strong>Education</strong></p>
+							<div class="form-group col-sm-6">
+								<span>University:</span><span style="color: red;">(*)</span>  
+								<input style="width: 230px!important;" class="form-control" type="text" name="university" 
+									id ="university" required>
+							</div>
+							<div class="form-group col-sm-6">
+								<span>Major:</span> 
+								<input style="width: 230px!important;" type="text" class="form-control" name="major" 
+									id ="major">
+							</div>
+							<div class="form-group col-sm-6">
+								<span>Graduation year:</span> 
+								<input style="width: 230px!important;" type="number" class="form-control" value="9999" name="graduationyear" 
+									id="graduationyear">
+							</div>
+	
+							<div class="form-group col-sm-6">
+								<span>GPA:</span> 
+								<input style="width: 230px!important;" type="text" class="form-control" value="4" name="gpa" 
+									id="gpa">
+							</div>
+							<p><strong>Skills</strong></p>
+							<div class="form-group col-sm-12">
+									<select style="width: 230px!important;" name="skill_id" id="skill">
+										<option disabled value="1">Choose Skill</option>            
+	                    			<c:forEach var="skill" items="${skills}">
+										<option value="${skill.no}">${skill.name}</option>
+									</c:forEach>
+		                    		</select>
+							</div>
+							<div class="form-group col-sm-6">
+								<span>GST:</span> 
+								<input style="width: 230px!important;" type="text" class="form-control" name="gst" 
+									id="gst">
+							</div>
+							<div class="form-group col-sm-6">
+								<span>Others:</span> 
+								<input style="width: 230px!important;" type="text" class="form-control" name="others" 
+									id="others">
+							</div>
+							<p><strong>Apply for</strong></p>
+							<div class="form-group col-sm-6">
+									<span>Position:</span><span style="color: red;">(*)</span> <br>
+									<select style="width: 230px!important;" name="position_id" id="position" required>
+										<option disabled>Choose Position</option>	             
+		                    			<c:forEach var="position" items="${positions}">
+											<option value="${position.id}">${position.name}</option>
+										</c:forEach>
+		                    		</select>
+							</div>
+							<div class="form-group col-sm-6">
+									<span>Interviewer admin:</span><br>
+									<select style="width: 230px!important;" name="intervieweradmin_id" id="intervieweradmin">
+										<option disabled value="1">Choose Interviewer Admin</option>
+										<c:forEach var="interviewer" items="${interviewers}">
+											<option value="${interviewer.id}">${interviewer.name}</option>
+										</c:forEach>
+		                    		</select>
+							</div>
+							<div class="col-sm-6 col-xs-12">
+								<button style="border: 0!important;" type="submit" class="btn btn-success btn-block">
+									<span class="glyphicon glyphicon-ok"></span> Save
+								</button>	
+							</div>
+							<div class="col-sm-6 col-xs-12">
+									<button style="border: 0!important;" type="reset" class="btn btn-danger btn-block">
+										<span class="glyphicon glyphicon-remove"></span> Reset
+									</button>						
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</c:when>
+		
 		</c:choose>
 		
 		<!-- /.page-content -->
