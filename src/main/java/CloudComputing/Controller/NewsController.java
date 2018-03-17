@@ -11,4 +11,9 @@ public class NewsController {
 		return "HomeAdmin";
 	}
 	
+	@GetMapping("/news")
+	public String News() {
+		return "News";
+	}
+	
 }
