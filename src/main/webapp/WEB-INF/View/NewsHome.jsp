@@ -1,574 +1,342 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Home News</title>
+    <!DOCTYPE html>
+    <html>
 
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Quickly Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>News Home</title>
+        <link href="Style/css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <link href="Style/css/style.css" rel='stylesheet' type='text/css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="application/x-javascript">
+            addEventListener("load", function() {
+                setTimeout(hideURLbar, 0);
+            }, false);
 
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="Style/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="Style/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- js -->
-<script src="Style/js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="Style/js/move-top.js"></script>
-<script type="text/javascript" src="Style/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
-</head>
-	
-<body>
-<!-- banner-body -->
-	<div class="banner-body">
-		<div class="container">
-<!-- header -->
-			<div class="header">
-				<div class="header-nav">
-					<nav class="navbar navbar-default">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						  </button>
-						   <a class="navbar-brand" href="index.html"><span>Q</span>uickly</a>
-						</div>
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
 
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-						 <ul class="nav navbar-nav">
-							<li class="hvr-bounce-to-bottom active"><a href="index.html">Home</a></li>
-							<li class="hvr-bounce-to-bottom"><a href="about.html">About</a></li>
-							<li class="hvr-bounce-to-bottom"><a href="Portfolio.html">Portfolio</a></li>
-							<li class="hvr-bounce-to-bottom"><a href="Pages.html">Pages</a></li>
-							<li class="hvr-bounce-to-bottom"><a href="contact.html">Contact Us</a></li>
-						  </ul>
-						  <div class="sign-in">
-							<ul>
-								<li><a href="login.html">Sign In </a>/</li>
-								<li><a href="register.html">Register</a></li>
-							</ul>
-							</div>
-						</div><!-- /.navbar-collapse -->
-					</nav>
-				</div>
-	
-			<!-- search-scripts -->
-			<script src="Style/js/classie.js"></script>
-			<script src="Style/js/uisearch.js"></script>
-				<script>
-					new UISearch( document.getElementById( 'sb-search' ) );
-				</script>
-			<!-- //search-scripts -->
-			</div>
-<!-- //header -->
-<!-- header-bottom -->
-	<div class="header-bottom">
-		<div class="header-bottom-top">
-			<ul>
-				<li><a href="#" class="g"> </a></li>
-				<li><a href="#" class="p"> </a></li>
-				<li><a href="#" class="facebook"> </a></li>
-				<li><a href="#" class="twitter"> </a></li>
-			</ul>
-		</div>
-		<div class="clearfix"> </div>
-<!-- banner -->
-		<div class="banner">
-<!-- Slider-starts-Here -->
-				<script src="Style/js/responsiveslides.min.js"></script>
-				 <script>
-				    // You can also use "$(window).load(function() {"
-				    $(function () {
-				      // Slideshow 4
-				      $("#slider3").responsiveSlides({
-				        auto: true,
-				        pager: false,
-				        nav: true,
-				        speed: 500,
-				        namespace: "callbacks",
-				        before: function () {
-				          $('.events').append("<li>before event fired.</li>");
-				        },
-				        after: function () {
-				          $('.events').append("<li>after event fired.</li>");
-				        }
-				      });
-				
-				    });
-				  </script>
-			<!--//End-slider-script -->
-				<div  id="top" class="callbacks_container wow fadeInUp" data-wow-delay="0.5s">
-					<ul class="rslides" id="slider3">
-						<li>
-							<div class="banner-inf">
-								<h3>soluta nobis est eligendi cumque</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula pretium, dui enim porta
-								lectus, non euismod tortor ante eu libero</p>
-								<a href="single.html">See More</a>
-							</div>
-						</li>
-						<li>
-							<div class="banner-inf">
-								<h3>euismod nobis est eligendi cumque</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula pretium, dui enim porta
-								lectus, non euismod tortor ante eu libero</p>
-								<a href="single.html">See More</a>
-							</div>
-						</li>
-						<li>
-							<div class="banner-inf">
-								<h3>tortor nobis est eligendi cumque</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula pretium, dui enim porta
-								lectus, non euismod tortor ante eu libero</p>
-								<a href="single.html">See More</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-		</div>
-<!-- //banner -->
-<!-- banner-bottom -->
-			<div class="banner-bottom">
-				<ul id="flexiselDemo1">			
-					<li>
-						<div class="banner-bottom-grid">
-							<img src="Style/images/1.jpg" alt=" Huy" class="img-responsive" />
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus 
-								qui blanditiis praesentium voluptatum deleniti atque corrupti 
-								quos dolores et quas molestias excepturi sint occaecati
-								cupiditate non provident</p>
-							<div class="more">
-								<a href="single.html" class="hvr-bounce-to-bottom sint">Read More</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="banner-bottom-grid">
-							<img src="Style/images/2.jpg" alt=" " class="img-responsive" />
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus 
-								qui blanditiis praesentium voluptatum deleniti atque corrupti 
-								quos dolores et quas molestias excepturi sint occaecati
-								cupiditate non provident</p>
-							<div class="more">
-								<a href="single.html" class="hvr-bounce-to-bottom sint">Read More</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="banner-bottom-grid">
-							<img src="Style/images/3.jpg" alt=" " class="img-responsive" />
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus 
-								qui blanditiis praesentium voluptatum deleniti atque corrupti 
-								quos dolores et quas molestias excepturi sint occaecati
-								cupiditate non provident</p>
-							<div class="more">
-								<a href="single.html" class="hvr-bounce-to-bottom sint">Read More</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-				<script type="text/javascript">
-							$(window).load(function() {
-								$("#flexiselDemo1").flexisel({
-									visibleItems: 3,
-									animationSpeed: 1000,
-									autoPlay: false,
-									autoPlaySpeed: 3000,    		
-									pauseOnHover: true,
-									enableResponsiveBreakpoints: true,
-									responsiveBreakpoints: { 
-										portrait: { 
-											changePoint:480,
-											visibleItems: 1
-										}, 
-										landscape: { 
-											changePoint:640,
-											visibleItems:2
-										},
-										tablet: { 
-											changePoint:768,
-											visibleItems: 3
-										}
-									}
-								});
-								
-							});
-					</script>
-					<script type="text/javascript" src="Style/js/jquery.flexisel.js"></script>
-			</div>
-<!-- //banner-bottom -->
-<!-- blog -->
-			<div class="blog">
-				<div class="blog-left">
-					<div class="blog-left-grid">
-						<div class="blog-left-grid-left">
-							<h3><a href="single.html">voluptates repudiandae sint non recusandae</a></h3>
-							<p>by <span>Charlie</span> | June 29,2015 | <span>Sint</span></p>
-						</div>
-						<div class="blog-left-grid-right">
-							<a href="#" class="hvr-bounce-to-bottom non">20 Comments</a>
-						</div>
-						<div class="clearfix"> </div>
-						<a href="single.html"><img src="Style/images/4.jpg" alt=" " class="img-responsive" /></a>
-						<p class="para"> Itaque earum rerum hic tenetur a sapiente delectus, 
-							ut aut reiciendis voluptatibus maiores alias consequatur aut 
-							perferendis doloribus asperiores repellat.Et harum quidem rerum 
-							facilis est et expedita distinctio. Nam libero tempore, cum 
-							soluta nobis est eligendi optio cumque nihil impedit quo minus 
-							id quod maxime placeat facere possimus, omnis voluptas assumenda 
-							est, omnis dolor repellendus. Temporibus autem quibusdam et 
-							aut officiis debitis.</p>
-						<div class="rd-mre">
-							<a href="single.html" class="hvr-bounce-to-bottom quod">Read More</a>
-						</div>
-					</div>
-					<div class="blog-left-grid">
-						<div class="blog-left-grid-left">
-							<h3><a href="single.html">voluptates repudiandae sint non recusandae</a></h3>
-							<p>by <span>Charlie</span> | June 29,2015 | <span>Sint</span></p>
-						</div>
-						<div class="blog-left-grid-right">
-							<a href="#" class="hvr-bounce-to-bottom non">40 Comments</a>
-						</div>
-						<div class="clearfix"> </div>
-						<a href="single.html"><img src="Style/images/5.jpg" alt=" " class="img-responsive" /></a>
-						<p class="para"> Itaque earum rerum hic tenetur a sapiente delectus, 
-							ut aut reiciendis voluptatibus maiores alias consequatur aut 
-							perferendis doloribus asperiores repellat.Et harum quidem rerum 
-							facilis est et expedita distinctio. Nam libero tempore, cum 
-							soluta nobis est eligendi optio cumque nihil impedit quo minus 
-							id quod maxime placeat facere possimus, omnis voluptas assumenda 
-							est, omnis dolor repellendus. Temporibus autem quibusdam et 
-							aut officiis debitis.</p>
-						<div class="rd-mre">
-							<a href="single.html" class="hvr-bounce-to-bottom quod">Read More</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-right">
-					<div class="sap_tabs">	
-					<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-						  <ul class="resp-tabs-list">
-							  <li class="resp-tab-item grid1" aria-controls="tab_item-0" role="tab"><span>Popular</span></li>
-							  <li class="resp-tab-item grid2" aria-controls="tab_item-1" role="tab"><span>Recent</span></li>
-							  <li class="resp-tab-item grid3" aria-controls="tab_item-2" role="tab"><span>Comments</span></li>
-							  <div class="clear"></div>
-						  </ul>				  	 
-							<div class="resp-tabs-container">
-								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-									<div class="facts">
-									  <div class="tab_list">
-										<a href="Style/images/7-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/7.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015 <span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/8-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/8.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/9-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/9.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/10-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/10.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-								</div>
-								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-									<div class="facts">
-									  <div class="tab_list">
-										<a href="Style/images/8-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/8.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/9-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/9.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/10-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/10.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/7-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/7.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-								</div>
-								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-									<div class="facts">
-									  <div class="tab_list">
-										<a href="Style/images/9-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/9.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/10-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/10.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/7-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/7.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-									<div class="facts">
-									   <div class="tab_list">
-										<a href="Style/images/8-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-											<img src="Style/images/8.jpg" alt=" " class="img-responsive" />
-										</a>
-									  </div>
-									  <div class="tab_list1">
-										<a href="#">excepturi sint occaecati</a>
-										<p>June 30,2015<span>Nam libero tempore, cum soluta nobis.</span></p>
-									  </div>
-									  <div class="clearfix"> </div>
-									</div>
-								</div>
-							</div>
-						 <script src="Style/js/easyResponsiveTabs.js" type="text/javascript"></script>
-							<script type="text/javascript">
-								$(document).ready(function () {
-									$('#horizontalTab').easyResponsiveTabs({
-										type: 'default', //Types: default, vertical, accordion           
-										width: 'auto', //auto or any width like 600px
-										fit: true   // 100% fit in a container
-									});
-								});
-							   </script>
-						<link rel="stylesheet" href="Style/css/swipebox.css">
-						<script src="Style/js/jquery.swipebox.min.js"></script> 
-							<script type="text/javascript">
-								jQuery(function($) {
-									$(".swipebox").swipebox();
-								});
-							</script>
-					</div>
-					</div>
-					<div class="newsletter">
-						<h3>Subscribe To Our Newsletter</h3>
-						<form>
-							<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}" required="">
-							<input type="submit" value="Send">
-						</form>
-					</div>
-					<div class="four-fig">
-						<div class="four-fig1">
-							<a href="Style/images/11-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="Style/images/11.jpg" class="img-responsive" alt=" " />
-							</a>
-						</div>
-						<div class="four-fig1">
-							<a href="Style/images/14-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="Style/images/14.jpg" class="img-responsive" alt=" " />
-							</a>
-						</div>
-						<div class="four-fig1">
-							<a href="Style/images/10-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="Style/images/21.jpg" class="img-responsive" alt=" " />
-							</a>
-						</div>
-						<div class="four-fig1">
-							<a href="Style/images/8-.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="Style/images/22.jpg" class="img-responsive" alt=" " />
-							</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="pgs">
-						<h3>Pages</h3>
-						<ul>
-							<li><a href="#">doloribus asperiores repellat</a></li>
-							<li><a href="#">Itaque earum rerum hic tenetur</a></li>
-							<li><a href="#">deserunt mollitia laborum et dolorum</a></li>
-							<li><a href="#">facilis est et expedita distinctio</a></li>
-							<li><a href="#">occaecati cupiditate non provident</a></li>
-							<li><a href="#">deserunt mollitia laborum et dolorum</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-<!-- //blog -->
-	</div>
-<!-- //header-bottom -->
-		</div>
-	</div>
-<!-- //banner-body -->
-<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-3 footer-grid">
-					<h3>cumque nihil impedit</h3>
-					<div class="footer-grd-left">
-						<img src="Style/images/11.jpg" class="img-responsive" alt=" " />
-					</div>
-					<div class="footer-grd-left">
-						<p>Nam libero tempore, cum 
-							soluta nobis est eligendi optio cumque nihil impedit quo minus 
-							id quod maxime placeat facere possimus, omnis voluptas assumenda 
-							est, omnis dolor repellendus</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-3 footer-grid">
-					<h3>voluptas assumenda</h3>
-					<ul>
-						<li><a href="#">doloribus asperiores</a></li>
-						<li><a href="#">Itaque earum rerum</a></li>
-						<li><a href="#">deserunt mollitia</a></li>
-						<li><a href="#">facilis est et expedita</a></li>
-						<li><a href="#">occaecati cupiditate</a></li>
-						<li><a href="#">deserunt mollitia laborum</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 footer-grid">
-					<h3>deserunt mollitia</h3>
-					<ul>
-						<li><a href="#">doloribus asperiores</a></li>
-						<li><a href="#">Itaque earum rerum</a></li>
-						<li><a href="#">deserunt mollitia</a></li>
-						<li><a href="#">facilis est et expedita</a></li>
-						<li><a href="#">occaecati cupiditate</a></li>
-						<li><a href="#">deserunt mollitia laborum</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 footer-grid">
-					<h3>Flckr Posts</h3>
-					<div class="footer-grd">
-						<img src="Style/images/7.jpg" class="img-responsive" alt=" " />
-					</div>
-					<div class="footer-grd">
-						<img src="Style/images/8.jpg" class="img-responsive" alt=" " />
-					</div>
-					<div class="footer-grd">
-						<img src="Style/images/9.jpg" class="img-responsive" alt=" " />
-					</div>
-					<div class="clearfix"> </div>
-					<div class="footer-grd">
-						<img src="Style/images/10.jpg" class="img-responsive" alt=" " />
-					</div>
-					<div class="footer-grd">
-						<img src="Style/images/7.jpg" class="img-responsive" alt=" " />
-					</div>
-					<div class="footer-grd">
-						<img src="Style/images/8.jpg" class="img-responsive" alt=" " />
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<div class="footer-bottom">
-		<div class="container">
-			<p>© 2015 Quickly. All rights reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
-		</div>
-	</div>
-<!-- //footer -->
-<!-- for bootstrap working -->
-		<script src="Style/js/bootstrap.js"> </script>
-<!-- //for bootstrap working -->
-</body>
-</html>
+        </script>
+        <script src="Style/js/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" href="Style/css/flexslider.css" type="text/css" media="screen" />
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <script src="Style/js/modernizr.js"></script>
+        <!--Start-smoth-scrolling-->
+        <script type="text/javascript" src="Style/js/move-top.js"></script>
+        <script type="text/javascript" src="Style/js/easing.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event) {
+                    event.preventDefault();
+                    $('html,body').animate({
+                        scrollTop: $(this.hash).offset().top
+                    }, 1000);
+                });
+            });
+
+        </script>
+        <!--end-smoth-scrolling-->
+        <!--animated-css-->
+        <link href="Style/css/animate.css" rel="stylesheet" type="text/css" media="all">
+        <script src="Style/js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+
+        </script>
+        <!--animated-css-->
+    </head>
+
+    <body>
+        <div class="mother-grid" id="home">
+            <div class="container">
+                <div class="header clock wow bounceIn">
+                    <h1><a href="index.html" class="primary-tille">MECUTE-HCMUTE</a></h1>
+                    <div class="nav-top">
+                        <span class="menu"><img src="Style/images/menu-icon.png" alt=""></span>
+                        <ul class="navgation">
+                            <li><a class="active" href="#home" class="scroll">HOME</a></li>
+                            <li><a href="#about" class="scroll">ABOUT</a></li>
+                            <li><a href="#services" class="scroll">NEW</a></li>
+                            <li><a href="#project" class="scroll">EVENT</a></li>
+                            <li><a href="#contact" class="scroll">MEMBER</a></li>
+                            <li><a href="#contact" class="scroll">IFNORMATION</a></li>
+                        </ul>
+                        <!--start-top-nav-script-->
+                        <script>
+                            $("span.menu").click(function() {
+                                $("ul.navgation").slideToggle(300, function() {
+                                    // Animation complete.
+                                });
+                            });
+
+                        </script>
+                        <!--End-top-nav-script-->
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="slider">
+                <section class="slider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <h2>ĐẠI HỌC SƯ PHẠM KỸ THUẬT HỒ CHÍ MINH</h2>
+                                <h5> Hiện đại , </h5>
+                            </li>
+                            <li>
+                                <h2>TUỔI TRẺ SPKT</h2>
+                                <h5>Sáng tạo , đổi mới , tràn đầy năng lượng </h5>
+                            </li>
+                            <li>
+                                <h2>ĐOÀN - HỘI</h2>
+                                <h5>Vững mạnh , đoàn kết ,sánh bước cùng sinh viên</h5>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <script>
+                    window.jQuery || document.write('<script src="Style/js/libs/jquery-1.7.min.js">\x3C/script>')
+
+                </script>
+                <!--FlexSlider-->
+                <script defer src="Style/js/jquery.flexslider.js"></script>
+                <script type="text/javascript">
+                    $(function() {
+                        SyntaxHighlighter.all();
+                    });
+                    $(window).load(function() {
+                        $('.flexslider').flexslider({
+                            animation: "slide",
+                            start: function(slider) {
+                                $('body').removeClass('loading');
+                            }
+                        });
+                    });
+
+                </script>
+            </div>
+        </div>
+        <div class="about" id="about">
+            <div class="container">
+                <h2>GIỚI THIỆU</h2>
+                <div class="about1 clock wow bounceIn">
+                    <div class="col-md-4 ">
+                        <div class="about-top">
+                            <h2>ĐẠI HỌC SƯ PHẠM KỸ THUẬT THÀNH PHỐ HỒ CHÍ MINH</h2>
+                            <h3>Là một trường đại học thuộc top 10 của thành phố . Với bề dày lịch sử gần 60 năm xây dựng và phát triển . Trường là nơi đào tạo ra những kỹ sư , giảng viên chất lượng cho cả nước .</h3>
+                            <a href="#">MORE INFO</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="about-top">
+                            <h2>ĐOÀN THANH NIÊN </h2>
+                            <h3>Là một trường đại học thuộc top 10 của thành phố . Với bề dày lịch sử gần 60 năm xây dựng và phát triển . Trường là nơi đào tạo ra những kỹ sư , giảng viên chất lượng cho cả nước .</h3>
+                            <a href="#">MORE INFO</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="about-top">
+                            <h2>ĐOÀN THANH NIÊN </h2>
+                            <h3>Là một trường đại học thuộc top 10 của thành phố . Với bề dày lịch sử gần 60 năm xây dựng và phát triển . Trường là nơi đào tạo ra những kỹ sư , giảng viên chất lượng cho cả nước .</h3>
+                            <a href="#">MORE INFO</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <hr size="10px" color="blue" />
+        </div>
+        <div class="content" id="services">
+            <div class="container">
+                <h2>NEW</h2>
+                <div class="content-1 clock wow bounceIn">
+                    <div class="col-md-4">
+                        <div class="content-grids">
+                            <div class="content-left">
+                                <span class="cnt1"> </span>
+                            </div>
+                            <div class="content-right">
+                                <h3>TUYỂN SINH 2018</h3>
+                                <P>Praesent dapibus, neque id cursus fauci-bus, tortor neque egestas augue,euin vulputate magna eros lipsum</P>
+                                <a href="#">MORE</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-grids">
+                            <div class="content-left">
+                                <span class="cnt2"> </span>
+                            </div>
+                            <div class="content-right">
+                                <h3>CẢM TÌNH ĐOÀN 2018</h3>
+                                <P>Craesent dapibus, neque id cursus fauci-bus, tortor neque egestas augue,euin vulputate magna eros lipsum</P>
+                                <a href="#">MORE</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-grids">
+                            <div class="content-left">
+                                <span class="cnt3"> </span>
+                            </div>
+                            <div class="content-right">
+                                <h3>KỶ NIỆM 88 NĂM THÀNH LẬP ĐOÀN</h3>
+                                <P>Jraesent dapibus, neque id cursus fauci-bus, tortor neque egestas augue,euin vulputate magna eros lipsum</P>
+                                <a href="#">MORE</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Responsive-tabs-Starts-Here-->
+        <div class="responsive-tabs" id="project">
+            <div class="container">
+                <h2>EVENT</h2>
+                <div class="tabs-box clock wow bounceIn">
+                    <ul class="tabs-menu">
+                        <li><a href="#tab1"><img src="Style/images/f.png" alt="">TRƯỜNG</a></li>
+                        <li><a href="#tab2"><img src="Style/images/d.png" alt="">ĐOÀN-HỘI</a></li>
+                        <li><a href="#tab3"><img src="Style/images/u.png" alt="">HOẠT ĐỘNG XÃ HỘI</a></li>
+                    </ul>
+                    <div class="clearfix"> </div>
+                    <div class="tab-grids">
+                        <div id="tab1" class="tab-grid">
+                            <div class="col-md-6 line1">
+                                <img src="Style/images/event1.jpg" alt="">
+                                <br>
+                                <ul class="infor-event">
+                                    <h2>TƯ VẤN TUYỂN SINH 2018</h2>
+                                    <li>Là chương trình được tổ chức hàng năm , nhằm cung cấp cho các học sinh trên cả nước về thông tin tuyển sinh , cách thức làm hồ sơ và giải đáp các thắc của học sinh .</li>
+                                    <li>Thành phần tham dự : Các trưởng khoa và trưởng bộ môn của các khoa trương trường</li>
+                                    <li>Thời gian , địa điểm : 20h thứ 2,4,6 hàng tuần . Phát sóng trực tiếp trên UTE TV .</li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div id="tab2" class="tab-grid">
+                            <div class="col-md-6 line1">
+                                <img src="Style/images/event-dh1.jpg" alt="">
+                                <br>
+                                <ul class="infor-event">
+                                    <h2>TƯ VẤN TUYỂN SINH 2018</h2>
+                                    <li>Là chương trình được tổ chức hàng năm , nhằm cung cấp cho các học sinh trên cả nước về thông tin tuyển sinh , cách thức làm hồ sơ và giải đáp các thắc của học sinh .</li>
+                                    <li>Thành phần tham dự : Các trưởng khoa và trưởng bộ môn của các khoa trương trường</li>
+                                    <li>Thời gian , địa điểm : 20h thứ 2,4,6 hàng tuần . Phát sóng trực tiếp trên UTE TV .</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 line2">
+                                <img src="Style/images/event-dh2.png" alt="">
+                                <br>
+                                <ul class="infor-event">
+                                    <h2>TƯ VẤN TUYỂN SINH 2018</h2>
+                                    <li>Là chương trình được tổ chức hàng năm , nhằm cung cấp cho các học sinh trên cả nước về thông tin tuyển sinh , cách thức làm hồ sơ và giải đáp các thắc của học sinh .</li>
+                                    <li>Thành phần tham dự : Các trưởng khoa và trưởng bộ môn của các khoa trương trường</li>
+                                    <li>Thời gian , địa điểm : 20h thứ 2,4,6 hàng tuần . Phát sóng trực tiếp trên UTE TV .</li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div id="tab3" class="tab-grid">
+                            <div class="col-md-6 line1">
+                                <img src="Style/images/event-xh.jpg" alt="">
+                                <br>
+                                <ul class="infor-event">
+                                    <h2>TƯ VẤN TUYỂN SINH 2018</h2>
+                                    <li>Là chương trình được tổ chức hàng năm , nhằm cung cấp cho các học sinh trên cả nước về thông tin tuyển sinh , cách thức làm hồ sơ và giải đáp các thắc của học sinh .</li>
+                                    <li>Thành phần tham dự : Các trưởng khoa và trưởng bộ môn của các khoa trương trường</li>
+                                    <li>Thời gian , địa điểm : 20h thứ 2,4,6 hàng tuần . Phát sóng trực tiếp trên UTE TV .</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 line2">
+                                <img src="Style/images/event-xh2.jpg" alt="">
+                                <br>
+                                <ul class="infor-event">
+                                    <h2>TƯ VẤN TUYỂN SINH 2018</h2>
+                                    <li>Là chương trình được tổ chức hàng năm , nhằm cung cấp cho các học sinh trên cả nước về thông tin tuyển sinh , cách thức làm hồ sơ và giải đáp các thắc của học sinh .</li>
+                                    <li>Thành phần tham dự : Các trưởng khoa và trưởng bộ môn của các khoa trương trường</li>
+                                    <li>Thời gian , địa điểm : 20h thứ 2,4,6 hàng tuần . Phát sóng trực tiếp trên UTE TV .</li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Script-->
+            <script src="Style/js/jquery-1.11.0.min.js"></script>
+            <script src="Style/js/myscript.js">
+
+
+            </script>
+            `
+            <!--Script-->
+        </div>
+        <!--Responsive-tabs-ends-Here-->
+        <div class="contact" id="contact">
+            <div class="container">
+                <div class="about-team">
+                    <h2 style="color: white">MEMBER</h2>
+                    <div class="about-text">
+                        <h3 class="ind">Our Professionals</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 about-team-grids">
+                            <div class="thumbnail">
+                                <img src="Style/images/Truong.jpg" alt="" class="img-responsive" />
+                                <div class="caption">
+                                    <h4><a href="#">Trưởng câu lạc bộ : Lê Danh </a></h4>
+                                    <p>Facebook :https://www.facebook.com/danhle.itdev.98</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 about-team-grids">
+                            <div class="thumbnail">
+                                <img src="Style/images/PhoCLB.jpg" alt="" class="img-responsive" />
+                                <div class="caption">
+                                    <h4><a href="#">Phó câu lạc bộ :Trịnh Minh Long</a></h4>
+                                    <p>Facebook :https://www.facebook.com/trinhminhlong98</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 about-team-grids">
+                            <div class="thumbnail">
+                                <img src="Style/images/Pho1.jpg" alt="" class="img-responsive" />
+                                <div class="caption">
+                                    <h4><a href="#">Phó phòng ruyền thông : Lương Thị Mỹ Hạnh</a></h4>
+                                    <p>Facebook :https://www.facebook.com/profile.php?id=100016286462026</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-text">
+                    <ul>
+                        <li>Mọi thông tin liện hệ : Câu lạc bộ truyền thông trường đại học Sư Phạm Kỹ Thuật thành phố Hồ Chí Minh
+                            <</li>
+                                <li>Địa chỉ : Số 1 Võ Văn Ngân , quận Thủ Đức , tp.Hồ Chí Minh</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+        </div>
+    </body>
+
+    </html>
