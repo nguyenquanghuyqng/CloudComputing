@@ -285,108 +285,98 @@
 									<input type="hidden" name="id" value="0" />
 							</div>	
 							<div class="form-group col-sm-6">
-								<span>Headding:</span><span style="color: red;">(*)</span>  
-								<input style="width: 230px!important;" class="form-control" type="text" name="headding" 
-									id ="headding" required>
+								<span>Headding:</span>
+								<input style="width: 230px;" class="form-control" type="text" name="headding" 
+									 id ="headding" required >
+							</div>
+							
+							<div class="form-group col-sm-6">
+								<span>Date:</span> 
+								<input style="width: 230px;" type="date" class="form-control" name="date" 
+									 id ="date" required>
 							</div>
 							<div class="form-group col-sm-6">
 								<span>Content:</span> 
-								<input style="width: 230px!important;" type="text" class="form-control"  name="content"  value="999999999"
-									id="content">								
+								<textarea rows="4" cols="40" style="width: 320px;" class="form-control"  name="content"
+									 id="content"></textarea>							
 							</div>
 							<div class="form-group col-sm-6">
-								<span>Email:</span><span style="color: red;">(*)</span> 
-								<input style="width: 230px!important;" type="email" class="form-control" name="email" 
-									id ="email" required>
-							</div>
-							<div class="form-group col-sm-6">
-								<span>Birth of day:</span><span style="color: red;">(*)</span><br>  
-								<input style="width: 230px!important;" type="date" name="birth"
-									id="birthday" required>
+								<span>Link:</span> <br>
+								<input style="width: 230px;" type="text" name="link"
+									 id="link" required>
 							</div>
 	
 							<div class="form-group col-sm-6">
-								<span>Phone:</span><span style="color: red;">(*)</span>  
-								<input style="width: 230px!important;" type="number" class="form-control" name="phone" 
-									id="phone" required>
+								<span>Image:</span> <br>
+								<input style="width: 230px;" type="file" name="image" 
+									 id="image" required>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</c:when>
+		
+		<c:when test="${mode == 'EDIT'}">
+			<div class="main-content">
+
+				<div class="main-content-inner">
+					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li><i class="ace-icon fa fa-home home-icon"></i> <a
+								href="home">Home</a></li>
+
+							<li><a href="candidate">Manage NEWS</a></li>
+						</ul>
+					</div>
+				</div>
+			<br> <br>
+				<div class="page-content">
+					<div class="page-header text-center">
+						<b><h1>MANAGE NEWS</h1></b>
+					</div>
+					<div class="col-sm-6 col-xs-6">
+						<h2>
+							<c:out value="${mode}"></c:out>
+							NEWS
+						</h2>
+					</div>
+					<div class="col-sm-5 col-xs-5"></div>
+					<div class="col-sm-1 col-xs-1"></div>
+
+					<br> <br> <br> <br> <br>
+					<div class="col-sm-12 col-xs-12">
+						<form action="save-candidate" method="POST" style="align-items: center;">
+							<p><strong>News Information</strong></p>
+							<div class="form-group col-sm-12 col-xs-12">
+									<input type="hidden" name="id" value="0" />
+							</div>	
+							<div class="form-group col-sm-6">
+								<span>Headding:</span>
+								<input style="width: 230px;" class="form-control" type="text" name="headding" 
+									value="${newss.headding }" id ="headding" required>
+							</div>
+							
+							<div class="form-group col-sm-6">
+								<span>Date:</span> 
+								<input style="width: 230px;" type="date" class="form-control" name="date" 
+									value="${newss.date }" id ="date" required>
 							</div>
 							<div class="form-group col-sm-6">
-								<span>Address:</span> 
-								<input style="width: 230px!important;" type="text" class="form-control" name="address" 
-									id="address">								
-							</div>
-							<div class="form-group col-sm-12"> 
-								<input style="width: 230px!important;" type="hidden" class="form-control" name="coincidence" id="address">								
-							</div>						
-							<p><strong>Education</strong></p>
-							<div class="form-group col-sm-6">
-								<span>University:</span><span style="color: red;">(*)</span>  
-								<input style="width: 230px!important;" class="form-control" type="text" name="university" 
-									id ="university" required>
+								<span>Content:</span> 
+								<textarea rows="4" cols="40" style="width: 320px;" class="form-control"  name="content"
+									id="content">${newss.content }	</textarea>							
 							</div>
 							<div class="form-group col-sm-6">
-								<span>Major:</span> 
-								<input style="width: 230px!important;" type="text" class="form-control" name="major" 
-									id ="major">
-							</div>
-							<div class="form-group col-sm-6">
-								<span>Graduation year:</span> 
-								<input style="width: 230px!important;" type="number" class="form-control" value="9999" name="graduationyear" 
-									id="graduationyear">
+								<span>Link:</span> <br>
+								<input style="width: 230px;" type="text" name="link"
+									value="${newss.link }" id="link" required>
 							</div>
 	
 							<div class="form-group col-sm-6">
-								<span>GPA:</span> 
-								<input style="width: 230px!important;" type="text" class="form-control" value="4" name="gpa" 
-									id="gpa">
-							</div>
-							<p><strong>Skills</strong></p>
-							<div class="form-group col-sm-12">
-									<select style="width: 230px!important;" name="skill_id" id="skill">
-										<option disabled value="1">Choose Skill</option>            
-	                    			<c:forEach var="skill" items="${skills}">
-										<option value="${skill.no}">${skill.name}</option>
-									</c:forEach>
-		                    		</select>
-							</div>
-							<div class="form-group col-sm-6">
-								<span>GST:</span> 
-								<input style="width: 230px!important;" type="text" class="form-control" name="gst" 
-									id="gst">
-							</div>
-							<div class="form-group col-sm-6">
-								<span>Others:</span> 
-								<input style="width: 230px!important;" type="text" class="form-control" name="others" 
-									id="others">
-							</div>
-							<p><strong>Apply for</strong></p>
-							<div class="form-group col-sm-6">
-									<span>Position:</span><span style="color: red;">(*)</span> <br>
-									<select style="width: 230px!important;" name="position_id" id="position" required>
-										<option disabled>Choose Position</option>	             
-		                    			<c:forEach var="position" items="${positions}">
-											<option value="${position.id}">${position.name}</option>
-										</c:forEach>
-		                    		</select>
-							</div>
-							<div class="form-group col-sm-6">
-									<span>Interviewer admin:</span><br>
-									<select style="width: 230px!important;" name="intervieweradmin_id" id="intervieweradmin">
-										<option disabled value="1">Choose Interviewer Admin</option>
-										<c:forEach var="interviewer" items="${interviewers}">
-											<option value="${interviewer.id}">${interviewer.name}</option>
-										</c:forEach>
-		                    		</select>
-							</div>
-							<div class="col-sm-6 col-xs-12">
-								<button style="border: 0!important;" type="submit" class="btn btn-success btn-block">
-									<span class="glyphicon glyphicon-ok"></span> Save
-								</button>	
-							</div>
-							<div class="col-sm-6 col-xs-12">
-									<button style="border: 0!important;" type="reset" class="btn btn-danger btn-block">
-										<span class="glyphicon glyphicon-remove"></span> Reset
-									</button>						
+								<span>Image:</span> <br>
+								<input style="width: 230px;" type="file" name="image" 
+									value="${newss.image }" id="image" required>
 							</div>
 						</form>
 					</div>

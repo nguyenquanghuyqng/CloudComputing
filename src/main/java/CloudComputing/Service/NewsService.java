@@ -31,7 +31,7 @@ public class NewsService {
 	}
 
 	// Xóa tin tức
-	public void Delete(int id) {
+	public void delete(int id) {
 		newsRespository.delete(id);
 	}
 

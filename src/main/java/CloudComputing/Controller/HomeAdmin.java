@@ -27,7 +27,7 @@ public class HomeAdmin {
 	@GetMapping("/delete-news")
 	public String DeleteNews(@RequestParam int id, HttpServletRequest request) {
 		try {
-			newService.Delete(id);
+			newService.delete(id);
 			request.setAttribute("announce", "You delete successfully");
 			System.out.println("Delete Successfull");
 		} catch (Exception e) {
@@ -35,7 +35,6 @@ public class HomeAdmin {
 			System.out.println("Delete Error");
 		}
 		request.setAttribute("newss", newService.findAllNews());
-		request.setAttribute("announcement", "Show data successfull");
 		request.setAttribute("mode", "LIST");
 		return PATH;
 	}
@@ -46,4 +45,10 @@ public class HomeAdmin {
 		return PATH;
 	}
 	
+	@GetMapping("/edit-news")
+	public String EditNews(@RequestParam int id, HttpServletRequest request) {
+		request.setAttribute("newss", newService.findNews(id));
+		request.setAttribute("mode", "EDIT");
+		return PATH;
+	}
 }
