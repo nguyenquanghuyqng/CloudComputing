@@ -65,8 +65,9 @@
 			</button>
 			<div class="navbar-buttons navbar-header pull-right"
 				role="navigation">
-				<button style="border: 0 !important;" class="btn btn-primary">
-					<span class="glyphicon glyphicon-log-out"></span> Log out
+				<button style="border: 0 !important;" class="btn btn-primary" 
+				onclick="window.location.assign('newshome')">
+					<span class="glyphicon glyphicon-log-out"></span>Log out
 				</button>
 			</div>
 		</div>
@@ -214,8 +215,9 @@
 								<script type="text/javascript">
                                     function myFunction(val, no) {
                                         if (val == 3) {
-                                        
+                                        	
                                    			var result = confirm("Want to delete news?");
+                                   			
                                    			if(result){
                                    				window.location.assign('delete-news?id=' + no)
                                    			}
