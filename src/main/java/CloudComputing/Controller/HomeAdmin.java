@@ -35,7 +35,7 @@ public class HomeAdmin {
 			request.setAttribute("announce", "You delete successfully");
 			System.out.println("Delete Successfull");
 		} catch (Exception e) {
-			request.setAttribute("announce", "Error when you delete candidate");
+			request.setAttribute("announce", "Error when you delete news");
 			System.out.println("Delete Error");
 		}
 		request.setAttribute("newss", newService.findAllNews());

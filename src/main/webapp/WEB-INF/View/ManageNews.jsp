@@ -212,38 +212,25 @@
 								<div class="col-sm-1 col-xs-1"></div>
 								<!-- chọn action -->
 								<script type="text/javascript">
-                                                    function myFunction(val, id) {
-                                                        if (val == 3) {
-                                                            var dynamicDialog = $('<div id="conformBox">Are you sure to delete?</div>');
+                                    function myFunction(val, no) {
+                                        if (val == 3) {
+                                        
+                                   			var result = confirm("Want to delete news?");
+                                   			if(result){
+                                   				window.location.assign('delete-news?id=' + no)
+                                   			}
+                                   			else{
+                                   				window.location.assign('manage-news')
+                                   			}
+                                                            
+                                        } else if (val == 2) {
+                                            window.location.assign('edit-news?id=' + no)
+                                        } else if (val == 1) {
+                                            window.location.assign('add-news?id=' + no)
+                                        }
+                                    }
 
-                                                            dynamicDialog.dialog({
-                                                                title: "Warning",
-                                                                closeOnEscape: true,
-                                                                modal: true,
-
-                                                                buttons: [{
-                                                                        text: "Delete",
-                                                                        click: function() {
-                                                                            $(this).dialog("close");
-                                                                            window.location.assign('delete-news?id=' + id)
-                                                                        }
-                                                                    },
-                                                                    {
-                                                                        text: "Cancel",
-                                                                        click: function() {
-                                                                            $(this).dialog("close");
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            });
-                                                        } else if (val == 2) {
-                                                            window.location.assign('edit-news?id=' + id)
-                                                        } else if (val == 1) {
-                                                            window.location.assign('add-news?id=' + id)
-                                                        }
-                                                    }
-
-                                                </script>
+                                </script>
 							</div>
 
 						</div>
