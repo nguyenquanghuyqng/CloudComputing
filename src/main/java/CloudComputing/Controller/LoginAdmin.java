@@ -26,8 +26,6 @@ public class LoginAdmin {
 	@PostMapping("/loginadmin")
 	public String LoginAdmins(@ModelAttribute Accounts accounts,BindingResult bindingResult, HttpServletRequest request) {
 
-		System.out.println(request.getParameter("name"));
-		System.out.println(request.getParameter("password"));
 		if (request.getParameter("name").equals("admin") && request.getParameter("password").equals("admin")) {
 			
 			System.out.println("Hello Login successfull");
