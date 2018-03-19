@@ -27,7 +27,7 @@
 					<label>Username</label>
 					<input type="text" name="name" placeholder="Username" id="name" required/>
 					<label>Password</label>
-					<input type="password" name="password" placeholder="Password" id="password" required />
+					<input type="text" name="password" placeholder="Password" id="password" required />
 					<a href="#" class="pass">Forgot Password ?</a>
 					<input type="submit" value="Log In" />
 				</form>
