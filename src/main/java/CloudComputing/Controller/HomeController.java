@@ -12,4 +12,9 @@ public class HomeController {
 	public String home() {
 		return PATH;
 	}
+	
+	@GetMapping("/newss")
+	public String News() {
+		return "News";
+	}
 }

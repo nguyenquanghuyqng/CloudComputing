@@ -53,6 +53,10 @@
             <div class="container">
                 <div class="header clock wow bounceIn">
                     <h1><a href="index.html" class="primary-tille">MECUTE-HCMUTE</a></h1>
+                    
+                    <button Style="float:right;border: 0 !important; width: 100px;"
+                    onclick="window.location.assign('login')" >LOGIN</button>
+                    
                     <div class="nav-top">
                         <span class="menu"><img src="Style/images/menu-icon.png" alt=""></span>
                         <ul class="navgation">

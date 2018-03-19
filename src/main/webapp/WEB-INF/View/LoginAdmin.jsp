@@ -1,9 +1,4 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,8 +14,8 @@
 	<link rel="stylesheet" href="Style/Login/css/font-awesome.css">
 	<link rel="stylesheet" href="Style/Login/css/style.css">
 	<!-- google fonts  -->
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="Style/Login/css/font1.css">
+	<link rel="stylesheet" href="Style/Login/css/font2.css">
 </head>
 <body>
 	<div class="agile-login">
@@ -28,11 +23,11 @@
 		<div class="wrapper">
 			<h2>Sign In</h2>
 			<div class="w3ls-form">
-				<form action="/" method="post">
+				<form action="/loginadmin" method="post">
 					<label>Username</label>
-					<input type="text" name="name" placeholder="Username" required/>
+					<input type="text" name="name" placeholder="Username" id="name" required/>
 					<label>Password</label>
-					<input type="text" name="password" placeholder="Password" required />
+					<input type="text" name="password" placeholder="Password" id="password" required />
 					<a href="#" class="pass">Forgot Password ?</a>
 					<input type="submit" value="Log In" />
 				</form>
