@@ -132,7 +132,7 @@
             <div class="container">
                 <h2>GIỚI THIỆU</h2>
                 <div class="about1 clock wow bounceIn">
-                	<c:forEach var="news" items="${newss}">
+                	<c:forEach var="news" items="${newss}" begin="1" end="4">
 	                    <div class="col-md-4 ">
 	                        <div class="about-top">
 	                            <h2>${news.headding }</h2>
