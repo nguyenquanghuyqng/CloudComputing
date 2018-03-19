@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import CloudComputing.Model.News;
@@ -62,14 +63,16 @@ public class HomeAdmin {
 	}
 	
 	@PostMapping("/save-news")
-	public String SaveNews(@ModelAttribute News news, BindingResult bindingResult,
+	public String SaveAddNews(@ModelAttribute News news, BindingResult bindingResult,
 			HttpServletRequest request) {
 		
 		String announce = null;		
 		if(news.getId()==0)
 		{
-			announce = "add new news";
-		} else announce = "update news";
+			announce = "add news";
+		} else {
+			announce = "update news";
+		}
 		
 		try {
 			request.setCharacterEncoding("UTF-8");

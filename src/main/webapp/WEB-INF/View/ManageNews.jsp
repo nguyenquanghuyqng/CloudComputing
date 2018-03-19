@@ -275,6 +275,9 @@
 								<p>
 									<strong>News Information</strong>
 								</p>
+								<div class="col-sm-1 col-xs-12">
+									<input type="hidden" id="id" name="id" value="${newss.id}" />
+								</div>
 								<div class="form-group col-sm-12 col-xs-12">
 									<input type="hidden" name="id" value="0" />
 								</div>
@@ -320,9 +323,7 @@
 										<span class="glyphicon glyphicon-remove"></span> Reset
 									</button>
 								</div>
-								<div class="col-sm-1 col-xs-12">
-									<input type="hidden" name="id" value="${newss.id}" />
-								</div>
+								
 							</form>
 						</div>
 					</div>

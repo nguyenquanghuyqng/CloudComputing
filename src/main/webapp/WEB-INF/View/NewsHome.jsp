@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+	<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
     <!DOCTYPE html>
     <html>
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>News Home</title>
@@ -128,30 +132,16 @@
             <div class="container">
                 <h2>GIỚI THIỆU</h2>
                 <div class="about1 clock wow bounceIn">
-                    <div class="col-md-4 ">
-                        <div class="about-top">
-                            <h2>ĐẠI HỌC SƯ PHẠM KỸ THUẬT THÀNH PHỐ HỒ CHÍ MINH</h2>
-                            <h3>Là một trường đại học thuộc top 10 của thành phố . Với bề dày lịch sử gần 60 năm xây dựng và phát triển . Trường là nơi đào tạo ra những kỹ sư , giảng viên chất lượng cho cả nước .</h3>
-                            <a href="#">MORE INFO</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="about-top">
-                            <h2>ĐOÀN THANH NIÊN </h2>
-                            <h3>Là một trường đại học thuộc top 10 của thành phố . Với bề dày lịch sử gần 60 năm xây dựng và phát triển . Trường là nơi đào tạo ra những kỹ sư , giảng viên chất lượng cho cả nước .</h3>
-                            <a href="#">MORE INFO</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="about-top">
-                            <h2>ĐOÀN THANH NIÊN </h2>
-                            <h3>Là một trường đại học thuộc top 10 của thành phố . Với bề dày lịch sử gần 60 năm xây dựng và phát triển . Trường là nơi đào tạo ra những kỹ sư , giảng viên chất lượng cho cả nước .</h3>
-                            <a href="#">MORE INFO</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+                	<c:forEach var="news" items="${newss}">
+	                    <div class="col-md-4 ">
+	                        <div class="about-top">
+	                            <h2>${news.headding }</h2>
+	                            <h3>${news.content }</h3>
+	                            <a href="#">MORE INFO</a>
+	                        </div>
+	                        <div class="clearfix"> </div>
+	                    </div>
+                    </c:forEach>
                     <div class="clearfix"> </div>
                 </div>
             </div>
@@ -334,7 +324,7 @@
                 <div class="footer-text">
                     <ul>
                         <li>Mọi thông tin liện hệ : Câu lạc bộ truyền thông trường đại học Sư Phạm Kỹ Thuật thành phố Hồ Chí Minh
-                            <</li>
+                            </li>
                                 <li>Địa chỉ : Số 1 Võ Văn Ngân , quận Thủ Đức , tp.Hồ Chí Minh</li>
                     </ul>
                 </div>

@@ -52,11 +52,13 @@
 				<span class="sr-only">Toggle sidebar</span> <span class="icon-bar"></span>
 				<span class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-                <div class="navbar-buttons navbar-header pull-right" role="navigation">
-                    <button style="border: 0 !important;" class="btn btn-primary">
-					<span class="glyphicon glyphicon-log-out"></span> Log out
+                <div class="navbar-buttons navbar-header pull-right"
+				role="navigation">
+				<button style="border: 0 !important;" class="btn btn-primary" 
+				onclick="window.location.assign('newshome')">
+					<span class="glyphicon glyphicon-log-out"></span>Log out
 				</button>
-                </div>
+			</div>
             </div>
             <!-- /.navbar-container -->
         </div>
