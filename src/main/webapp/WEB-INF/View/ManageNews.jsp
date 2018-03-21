@@ -50,7 +50,19 @@
 <!-- ace scripts -->
 <script src="Style/HomeAdmin/js/ace-elements.min.js"></script>
 <script src="Style/HomeAdmin/js/ace.min.js"></script>
+<script src="Style/HomeAdmin/js/jquery.dataTables.min.js"></script>
+<script src="Style/HomeAdmin/js/dataTables.bootstrap.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#table").DataTable();
+	});
+</script>
 
+<script src="Style/ckeditor"></script>
+<script src="https://cdn.ckeditor.com/4.9.0/standard/ckeditor.js"></script>
+<script>
+			CKEDITOR.replace( 'content' );
+</script>
 </head>
 
 <body class="no-skin" style="font-size: 14px;">
@@ -118,7 +130,7 @@
 
 			<ul class="nav nav-list">
 
-				<li><a href="home"> <i
+				<li><a href="manage-news"> <i
 						class="menu-icon fa fa-tachometer"></i> <span class="menu-text">Home
 							Admin</span>
 				</a></li>
