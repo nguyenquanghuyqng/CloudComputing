@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +13,7 @@
 <link href="Style/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="Style/css/style.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript">
+<script type="application/x-javascript">	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
 </script>
 <script src="Style/js/jquery-1.11.0.min.js"></script>
@@ -49,9 +54,9 @@
 					<a href="index.html" class="primary-tille">MECUTE-HCMUTE</a>
 				</h1>
 				<div class="nav-top">
-					<span class="menu"><img src="Style/images/menu-icon.png" alt=""></span>
+					<span class="menu"><img src="images/menu-icon.png" alt=""></span>
 					<ul class="navgation">
-						<li><a class="active" href="#home" class="scroll">HOME</a></li>
+						<li><a class="active" href="newshome" class="scroll">HOME</a></li>
 						<li><a href="#project" class="scroll">EVENT</a></li>
 						<li><a href="#contact" class="scroll">IFNORMATION</a></li>
 					</ul>
@@ -76,7 +81,7 @@
 				<ul class="slides">
 					<li>
 						<h2>ĐẠI HỌC SƯ PHẠM KỸ THUẬT HỒ CHÍ MINH</h2>
-						<h5>Hiện đại ,</h5>
+						<h5>Hiện đại , phát triển và bền vững .</h5>
 					</li>
 					<li>
 						<h2>TUỔI TRẺ SPKT</h2>
@@ -92,10 +97,10 @@
 			<script>
 				window.jQuery
 						|| document
-								.write('<script src="Style/js/libs/jquery-1.7.min.js">\x3C/script>')
+								.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')
 			</script>
 			<!--FlexSlider-->
-			<script defer src="Style/js/jquery.flexslider.js"></script>
+			<script defer src="js/jquery.flexslider.js"></script>
 			<script type="text/javascript">
 				$(function() {
 					SyntaxHighlighter.all();
@@ -113,19 +118,28 @@
 	</div>
 	<!--Responsive-tabs-Starts-Here-->
 	<div class="responsive-tabs" id="project">
-		<div class="container" style="background-color: white">
-			<div
-				style="background-color: #4fbdb7; color: white; text-align: left; padding: 10px 20px;">News/Tuyển
-				sinh 2018</div>
-			<h2 style="text-align: center; margin: 20px; font-family: serif;">
-				<b>TUYỂN SINH ĐẠI HỌC CHÍNH QUY 2018</b>
-			</h2>
+			<div class="container" style="background-color: white">
+				<h2 id="title"
+					style="text-align: center; margin: 20px; font-family: serif; margin-top=20px;">	
+					<br>				
+					<b>${newId.headding}</b>
+				</h2>
+				<br> <br>
+				<div id="content_news">
+				<span>${newId.content}</span></div>
+				<br>
 
-		</div>
+				<div>
+					<h4>Các tin khác :</h4>
+					<div id="other-news" class="col-md-12">
+					<span>${newId.link}
+					</span></div>
+				</div>
+			</div>
 	</div>
 	<!--Script-->
-	<script src="Style/js/jquery-1.11.0.min.js"></script>
-	<script src="Style/js/myscript.js">
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/myscript.js">
 		
 	</script>
 	`

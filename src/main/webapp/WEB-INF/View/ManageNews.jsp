@@ -50,22 +50,12 @@
 <!-- ace scripts -->
 <script src="Style/HomeAdmin/js/ace-elements.min.js"></script>
 <script src="Style/HomeAdmin/js/ace.min.js"></script>
-<script src="Style/HomeAdmin/js/jquery.dataTables.min.js"></script>
-<script src="Style/HomeAdmin/js/dataTables.bootstrap.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$("#table").DataTable();
-	});
-</script>
 
-<script src="Style/ckeditor"></script>
-<script src="https://cdn.ckeditor.com/4.9.0/standard/ckeditor.js"></script>
-<script>
-			CKEDITOR.replace( 'content' );
-</script>
+
 </head>
 
 <body class="no-skin" style="font-size: 14px;">
+<script src="Style/ckeditor/ckeditor.js"/>
 
 	<div id="navbar"
 		class="img-responsive navbar navbar-default ace-save-state">
@@ -130,7 +120,7 @@
 
 			<ul class="nav nav-list">
 
-				<li><a href="manage-news"> <i
+				<li><a href="home"> <i
 						class="menu-icon fa fa-tachometer"></i> <span class="menu-text">Home
 							Admin</span>
 				</a></li>
@@ -175,7 +165,7 @@
 							<div class="page-header text-center">
 								<b><h1>MANAGE NEWS</h1></b>
 							</div>
-							<div class="col-sm-1 col-xs-1"></div>
+							<!-- <div class="col-sm-1 col-xs-1"></div>
 							<div class="col-sm-5 col-xs-5">
 								<h2>NEWS</h2>
 							</div>
@@ -184,13 +174,13 @@
 
 							<div class="col-sm-12 col-xs-12">
 								<div class="col-sm-1 col-xs-1"></div>
-
-								<div class="table-responsive col-sm-12 col-xs-12">
+ -->
+								<div class="table-responsive col-sm-12 col-xs-12" Style="height: 600px;">
 									<table id="table"
 										class="table table-bordered table-striped text-center">
 										<thead>
 											<tr style="background: skyblue">
-												<th class="text-center">&emsp;&emsp;ID</th>
+												<th class="text-center" >&emsp;&emsp;ID</th>
 												<th class="text-center">&emsp;&emsp;HEADDING</th>
 												<th class="text-center">&emsp;&emsp;CONTENT</th>
 												<th class="text-center">&emsp;&emsp;DATE</th>
@@ -208,9 +198,7 @@
 													<td>${news.date}</td>
 													<td>${news.image}</td>
 													<td>${news.link}</td>
-													<td><select
-														style="width: 80px !important; height: 26px !important;"
-														onchange="myFunction(this.value, ${news.id})">
+													<td><select style="width: 80px !important; height: 26px !important;" onchange="myFunction(this.value, ${news.id})">
 															<option value="0">Option</option>
 															<option value="1">Add</option>
 															<option value="2">Edit</option>
@@ -287,38 +275,43 @@
 								<p>
 									<strong>News Information</strong>
 								</p>
-								<div class="col-sm-1 col-xs-12">
-									<input type="hidden" id="id" name="id" value="${newss.id}" />
+								<div class="form-group col-sm-6">
+									<span>Id:</span><input class="form-control" type="text" name="id" value="${newss.id}" />
 								</div>
-								<div class="form-group col-sm-12 col-xs-12">
-									<input type="hidden" name="id" value="0" />
-								</div>
-
+								
 								<div class="form-group col-sm-6">
 									<span>Headding:</span> <input style="width: 230px;"
 										class="form-control" type="text" name="headding"
 										value="${newss.headding }" id="headding" required>
 								</div>
 
+							
+								<div class="form-group col-sm-12">
+									<span>Content:</span>
+									
+									<textarea style="width: 230px;"
+										type="text" name="content" id="content">${newss.content }	</textarea>
+								</div>
 								<div class="form-group col-sm-6">
 									<span>Date:</span> <input style="width: 230px;" type="date"
 										class="form-control" name="date" value="${newss.date }"
 										id="date" required>
 								</div>
-								<div class="form-group col-sm-6">
-									<span>Content:</span>
-									<textarea rows="4" cols="40" style="width: 320px;"
-										class="form-control" name="content" id="content">${newss.content }	</textarea>
-								</div>
-								<div class="form-group col-sm-6">
-									<span>Link:</span> <br> <input style="width: 230px;"
-										type="text" name="link" value="${newss.link }" id="link"
-										required>
-								</div>
-
+								
 								<div class="form-group col-sm-6">
 									<span>Image:</span> <br> <input style="width: 230px;"
 										type="file" name="image" value="${newss.image }" id="image">
+								</div>
+								
+								<div class="form-group col-sm-12">
+									<span>Link:</span> <br>
+									 <%-- <input style="width: 230px;"
+										type="text" name="link" value="${newss.link }" id="link"
+										required> --%>
+										
+									<textarea style="width: 230px;"
+										type="text" name="link" value="${newss.link }" id="link"
+										required>	</textarea>
 								</div>
 
 								<div class="col-sm-4 col-xs-12">
@@ -330,12 +323,11 @@
 
 								<div class="col-sm-4 col-xs-12">
 									<button
-										style="border: 0 !important; width: 320px; margin-top: -40px;"
+										style="border: 0 !important; width: 320px;"
 										type="reset" class="btn btn-danger btn-block">
 										<span class="glyphicon glyphicon-remove"></span> Reset
 									</button>
 								</div>
-								
 							</form>
 						</div>
 					</div>
@@ -374,9 +366,14 @@
 		class="btn-scroll-up btn btn-sm btn-inverse"> <i
 		class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 	</a>
+	<script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'content' );
+                CKEDITOR.replace( 'link' );
+            </script>
 
 	<!-- /.main-container -->
-
 </body>
 
 </html>
